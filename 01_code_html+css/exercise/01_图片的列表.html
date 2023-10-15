@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引进reset文件初始化浏览器样式 -->
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+
+        /* 给ul设计样式 */
+        .ul-list{
+            height:470px;
+            width:190px;
+            /* 剪裁溢出内容 */
+            overflow: hidden;
+            /* 在ul页面居中 */
+            margin:50px auto;
+            /* 背景颜色 */
+            background-color: #F4F4F4;
+        }
+
+        /* 设置图片大小 */
+        img{
+            /* 只需要改width、height其中一个，
+               另一个会随比例自己更改 */
+            width:100%;
+        }
+
+        /* 设置图片之间的边距 */
+        .ul-list li{
+            margin-bottom: 9px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>
+        <img src="./练习截图/01_1.png" alt="">
+        <img src="./练习截图/01_2.png" alt="">
+        <img src="./练习截图/01_3.png" alt="">
+    </div> -->
+
+    <ul class="ul-list">
+        <li>
+            <a href="javascript:;">
+                <img src="./练习截图/img/01_1.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="./练习截图/img/01_2.png" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <img src="./练习截图/img/01_3.png" alt="">
+            </a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <input type="text" value="电脑"> -->
+    <input type="checkbox" name="" id="">
+    <button>点击</button>
+    <!-- 自定义属性 -->
+    <div data-id="1" data-spm="buzhidao">1</div>
+    <div data-id="2">2</div>
+    <div data-id="3">3</div>
+    <div data-id="4">4</div>
+    <div data-id="5">5</div>
+
+    <script>
+        // // 获取元素
+        // const uname = document.querySelector('input')
+        //     // 设置值
+        // uname.value = 'woyaomai'
+        // uname.type = 'password'
+
+        const ipt = document.querySelector('input')
+        console.log(ipt.checked);
+        ipt.checked = true //勾选
+
+        //获取button
+        const btn = document.querySelector('button')
+        console.log(btn.disabled)
+        btn.disabled = true
+
+        // 自定义属性
+        const div = document.querySelector('div')
+        console.log(div.dataset.spm)
+    </script>
+</body>
+
+</html>

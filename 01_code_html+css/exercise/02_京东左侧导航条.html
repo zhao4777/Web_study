@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>京东左侧导航</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 以区分块大小 */
+        body{
+            background-color: bisque;
+        }
+        /* 将整个ul块设置样式 */
+        .ul-list{
+            /* 整个块的宽 */
+            width:208px;
+            /* 整个块的高 */
+            height:450px;
+            /* 块的内边距 */
+            padding:10px 0;
+            /* 块的背景颜色 */
+            background-color: #fefefe;
+            /* 将块居中 */
+            margin:50px auto;
+        }
+
+        /* 设置ul块里的每个li元素样式 */
+        .ul-list .item{
+            /* 表里的每一条的宽和高 */
+            width:190px;
+            height:25px;
+            /* 每一条的左内边距 */
+            padding-left: 18px;
+
+            /* 要元素在父元素中垂直居中，
+            只需将父元素的line-height设置为一个
+            和行高height一样的值 */
+            /* 即要想将父元素中的文字，line-height=hight */
+            line-height: 25px;
+        }
+
+        /* hover是移入鼠标属性 */
+        .item:hover{
+            /* 每一条移入时，有背景颜色 */
+            background-color:rgb(223, 222, 222);
+        }
+
+        /* 每条里的每一个鼠标移入 */
+        .item>a:hover{
+            /* 鼠标移入时，链接字会变红 */
+            color:#c81623;
+        }
+
+        /* 设置每个链接名的样式 */
+        .item a{
+            /* 设置字体大小 */
+            font-size: 14px;
+            color:#333;
+            /* 去除下划线！！！ */
+            text-decoration: none;
+        }
+
+        /* 设置/样式 */
+        a+span.sign{
+            padding:0 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 能用nav(div)，div(div)，ul(li) -->
+    <ul class="ul-list">
+        <li class="item">
+            <a href="#">家用电器</a>
+        </li>
+        <li class="item">
+            <a href="#">手机</a><span class="sign">/</span><a href="#">运营商</a><span class="sign">/</span><a href="#">数码</a>
+        </li>
+        <li class="item">
+            <a href="#">电脑</a><span class="sign">/</span><a href="#">办公</a>
+        </li>
+        <li class="item">
+            <a href="#">家居</a><span class="sign">/</span><a href="#">家具</a><span class="sign">/</span><a href="#">家装</a><span class="sign">/</span><a href="#">厨具</a>
+        </li>
+        <li class="item">
+            <a href="#">男装</a><span class="sign">/</span><a href="#">女装</a><span class="sign">/</span><a href="#">童装</a><span class="sign">/</span><a href="#">内衣</a>
+        </li>
+        <li class="item">
+            <a href="#">美妆</a><span class="sign">/</span><a href="#">个护清洁</a><span class="sign">/</span><a href="#">宠物</a>
+        </li>
+        <li class="item">
+            <a href="#">女鞋</a><span class="sign">/</span><a href="#">箱包</a><span class="sign">/</span><a href="#">钟表</a><span class="sign">/</span><a href="#">珠宝</a>
+        </li>
+        <li class="item">
+            <a href="#">男鞋</a><span class="sign">/</span><a href="#">运动</a><span class="sign">/</span><a href="#">户外</a>
+        </li>
+        <li class="item">
+            <a href="#">房产</a><span class="sign">/</span><a href="#">汽车</a><span class="sign">/</span><a href="#">汽车用品</a>
+        </li>
+        <li class="item">
+            <a href="#">母婴</a><span class="sign">/</span><a href="#">玩具乐器</a>
+        </li>
+        <li class="item">
+            <a href="#">食品</a><span class="sign">/</span><a href="#">酒类</a><span class="sign">/</span><a href="#">生鲜</a><span class="sign">/</span><a href="#">特产</a>
+        </li>
+        <li class="item">
+            <a href="#">艺术</a><span class="sign">/</span><a href="#">礼品鲜花</a><span class="sign">/</span><a href="#">农牧园艺</a>
+        </li>
+        <li class="item">
+            <a href="#">医药保健</a><span class="sign">/</span><a href="#">计生情趣</a>
+        </li>
+        <li class="item">
+            <a href="#">图书</a><span class="sign">/</span><a href="#">文娱</a><span class="sign">/</span><a href="#">教育</a><span class="sign">/</span><a href="#">电子书</a>
+        </li>
+        <li class="item">
+            <a href="#">机票</a><span class="sign">/</span><a href="#">酒店</a><span class="sign">/</span><a href="#">旅游</a><span class="sign">/</span><a href="#">生活</a>
+        </li>
+        <li class="item">
+            <a href="#">支付</a><span class="sign">/</span><a href="#">白条</a><span class="sign">/</span><a href="#">保险</a><span class="sign">/</span><a href="#">企业金融</a>
+        </li>
+        <li class="item">
+            <a href="#">安装</a><span class="sign">/</span><a href="#">维修</a><span class="sign">/</span><a href="#">清洗</a><span class="sign">/</span><a href="#">二手</a>
+        </li>
+        <li class="item">
+            <a href="#">工业品</a><span class="sign">/</span><a href="#">元器件</a>
+        </li>
+    </ul>
+</body>
+
+</html>

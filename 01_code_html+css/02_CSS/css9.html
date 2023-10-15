@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 对于p */
+        /* 表示第一个字母 */
+        p::first-letter{
+            font-size: 50px;
+        }
+        /* 表示第一行 */
+        p::first-line{
+            background-color: yellow;
+            color:red;
+        }
+        /* 表示选中的内容 */
+        p::selection{
+            background-color:pink;
+        }
+
+        /* 对于div */
+        /* div内容中Hello前面的位置 */
+        div::before{
+            content:'abc';
+            color: brown;
+        }
+
+        div::after{
+            content:'hha';
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>伪元素选择器</h1>
+
+    <div>Hello Hello how are you</div>
+
+    <p>ky children, Nancy did not know the name of her own parents, 
+        not to mention the possibility of receiving love from her parents. She was abandoned by her
+        parents the first day she was born. 
+        When Nancy was very young, she was told by some villagers that she was found by her grandmother under 
+        a tree by chance. As an old lady whose age was about sixty years old, her grandmother did not live with 
+        her son in the city. Instead, she chose to live in the small village alone and do farmwork. After she 
+        found Nancy, she took the poor girl home and</p>
+</body>
+</html>

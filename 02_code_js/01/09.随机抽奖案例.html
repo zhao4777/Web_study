@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>年会抽奖</h3>
+    <h1>一等奖：
+        <span style="color:red;">???</span>
+    </h1>
+    <h2>二等奖：
+        <span style="color:red;">???</span>
+    </h2>
+    <h3>三等奖：
+        <span style="color:red;">???</span>
+    </h3>
+
+    <script>
+        //抽奖名单的数组
+        const personArr = ['周杰伦', '刘德华', '周星驰', '张学友', '小a', '小b'];
+        //随即生成数，获取中奖人
+        const arr = []
+        for (let i = 0; i < 3; i++) {
+            const temp = Math.floor(Math.random() * personArr.length);
+            //console.log(temp1)
+            //删除中奖人
+            arr.push(personArr[temp])
+            personArr.splice(temp, 1);
+        }
+        console.log(arr);
+        //一等奖修改
+        const num1 = document.querySelector('h1 span')
+        num1.innerHTML = personArr[0]
+        const num2 = document.querySelector('h2 span')
+        num2.innerHTML = personArr[1]
+        const num3 = document.querySelector('h3 span')
+        num3.innerHTML = personArr[2]
+    </script>
+</body>
+
+</html>

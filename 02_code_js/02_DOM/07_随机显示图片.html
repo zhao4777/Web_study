@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 200px;
+            width: 200px;
+            background: pink;
+        }
+        
+        .active {
+            color: red;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../pic/imag01.jpg" alt="">
+    <div class="box">333</div>
+    <p></p>
+    <script>
+        // //随机数函数
+        // function randomNum(n, m) {
+        //     return Math.floor(Math.random() * (m - n + 1)) + n;
+        // }
+        // // 更改照片路径
+        // const img = document.querySelector('img')
+        // img.src = `../pic/image0${randomNum(1,4)}.jpg`
+
+
+        // // 修改样式（style）
+        // const box = document.querySelector('.box')
+        // box.style.width = '300px'
+        // box.style.backgroundColor = 'hotpink'
+        // box.style.borderTop = '2px solid black'
+
+        // //修改样式（类名）
+        // const p = document.querySelector('p')
+        // p.className = 'box'
+
+        //classList修改样式
+        const box = document.querySelector('.box')
+        box.classList.add('active')
+        box.classList.remove('box')
+        box.classList.toggle('box')
+    </script>
+</body>
+
+</html>

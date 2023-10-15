@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //方法一
+        var obj = {
+                uname: 'anna',
+                age: 19,
+                sayHI: function() {
+                    console.log('hi');
+                }
+            }
+            //调用对象属性
+        console.log(obj.uname);
+        console.log(obj['age']);
+        obj.sayHI();
+
+        //方法二
+        var obj2 = new Object();
+        obj2.uname = 'coco';
+        obj2.age = 10;
+        obj2.say = function() {
+            console.log('h');
+        }
+        console.log(obj2.uname);
+        console.log(obj2['age']);
+
+        //方法三 构造函数创建对象
+        function Star(uname, age, sex) {
+            this.name = uname;
+            this.age = age;
+            this.sex = sex;
+            this.sing = function(sang) {
+                console.log(sang);
+            }
+        }
+        var ldh = new Star('刘德华', 18, '男');
+        ldh.sing('一首歌');
+
+        //遍历对象
+        for (var k in ldh) {
+            console.log(k); //输出属性名
+            console.log(ldh[k]); //输出属性值
+        }
+
+        //内置对象
+        console.log(Math.PI);
+        console.log(Math.floor(-3.5)) //向下取整
+        console.log(Math.ceil(-3.5))
+
+        console.log(Math.random());
+
+        function getRandomIntInclusive(min, max) {
+            // min = Math.ceil(min);
+            // max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        var a = getRandomIntInclusive(0.8, 3);
+        console.log("random:" + getRandomIntInclusive(0.8, 3));
+
+        //随机点名
+        var arr = ['张三', '李四', '王五', '小刘'];
+        console.log(arr[getRandomIntInclusive(0, arr.length - 1)])
+
+        //Date
+        var date1 = new Date(2019, 10, 01);
+        console.log(date1);
+        var date2 = new Date('2019-10-01 8:8:8');
+        console.log(date2);
+
+        var date = new Date();
+        console.log(date.getFullYear());
+        console.log(date.getMonth());
+        console.log(date.getDate());
+        console.log(date.getDay());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <textarea name="showText" cols="x" rows="y">
+        用户注册协议
+        欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，欢迎注册成为京东用户！在您注册过程中，
+        </textarea  >
+        <div>
+            <button disabled class="btn">我同意该协议（60）</button>
+        </div>
+        
+    </div>
+
+    <script>
+        // 获取元素
+        let i=5
+        let btn=document.querySelector('.btn')
+        console.log(btn.innerHTML);
+        function getSec(){
+            i--
+            btn.innerHTML=(`我同意该协议(${i})`)
+            //关闭计时器
+            if(i===0){
+                clearInterval(n)
+                btn.disabled=false
+                btn.innerHTML=(`我同意该协议`)
+            }
+        }
+        // 开启定时器
+        let n= setInterval(getSec,1000)
+    </script>
+</body>
+
+</html>

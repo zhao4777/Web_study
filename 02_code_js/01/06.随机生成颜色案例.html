@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    function getRandomColor(flag) {
+        // 如果flag为true，用#表示颜色
+        if (flag === true) {
+            let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+            let str = '#';
+            //6次循环
+            for (let i = 0; i < 6; i++) {
+                //生成随机数
+                let ran = Math.floor(Math.random() * arr.length);
+                //console.log(ran)
+                //每轮根据产生的随机数添加字符
+                str += arr[ran];
+            }
+            return str;
+        } else {
+            // 如果flag为flase，用rgb表示
+            let r = Math.floor(Math.random() * 256);
+            let g = Math.floor(Math.random() * 256);
+            let b = Math.floor(Math.random() * 256);
+            return `rgb(${r},${g},${b})`;
+        }
+
+    }
+
+    //调用函数
+    let res1 = getRandomColor(false)
+    let res2 = getRandomColor(true)
+    console.log(res1);
+    console.log(res2);
+</script>
+
+</html>

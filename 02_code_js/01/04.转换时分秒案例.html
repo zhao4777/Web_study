@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sec = +prompt('请输入你想要转换的秒数')
+
+        function turn(sec) {
+            let h = parseInt(sec / 60 / 60 % 24)
+            h = h > 10 ? h : '0' + h
+            let m = parseInt(sec / 60 % 60)
+            m = m > 10 ? m : '0' + m
+            let s = parseInt(sec % 60)
+            s = s > 10 ? s : '0' + s
+            document.write(`${sec}转换为${h}小时${m}分钟${s}秒`)
+        }
+        turn(sec)
+    </script>
+</body>
+
+</html>

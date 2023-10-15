@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 函数部分
+        function fun1(x = 0, y = 0) {
+            document.write(`这次输出的和是${x+y}<br>`)
+        }
+        fun1()
+        fun1(2, 3)
+
+        function fun2(arr = []) {
+            document.write(`这次输出的数组长度是${arr.length}<br>`)
+        }
+        fun2() //0
+        fun2([11, 22, 33]) //3
+
+        //匿名函数
+        let fun3 = function() {};
+
+        (function(x, y) {
+            let num = 10
+            console.log(x + y);
+        })(1, 2);
+        (function() {
+            let num = 20
+        })();
+        (function() {}());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="com">电脑</button>
+    <button id="mou">鼠标</button>
+    <br>
+    <img src="../pic/computer.webp" alt="" title="电脑">
+    <script>
+        //修改元素属性
+        //获取元素
+        var com = document.getElementById('com');
+        var mou = document.getElementById('mou');
+        var img = document.querySelector('img');
+
+        //注册事件、处理程序
+        mou.onclick = function() {
+            img.src = "../pic/mouse.webp";
+            img.title = "鼠标";
+        }
+        com.onclick = function() {
+            img.src = "../pic/computer.webp";
+            img.title = "电脑";
+        }
+    </script>
+</body>
+
+</html>

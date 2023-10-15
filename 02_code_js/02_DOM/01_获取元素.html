@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2023-5-12</div>
+    <ul>
+        <li>这是一个句子1</li>
+        <li>这是一个句子2</li>
+        <li>这是一个句子3</li>
+        <li>这是一个句子4</li>
+        <li>这是一个句子5</li>
+    </ul>
+
+    <ol id="ol">
+        <li>这是句子1</li>
+        <li>这是句子2</li>
+        <li>这是句子3</li>
+        <li>这是句子4</li>
+        <li>这是句子5</li>
+    </ol>
+    <script>
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.dir(timer);
+
+        var lis = document.getElementsByTagName('li');
+        console.log(lis[0]);
+
+        var ol = document.getElementById('ol');
+        console.log(ol.getElementsByTagName('li'));
+    </script>
+</body>
+
+</html>

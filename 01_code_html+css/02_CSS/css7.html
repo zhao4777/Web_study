@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 利用伪类选择器，来给无序表的第一个设置红色 */
+        ul>li:first-child{
+            color:red;
+        }
+
+        ul>li:not(:nth-child(3)){
+            color:yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>第七节 伪类选择器</h1>
+
+    <!-- 创建一个无序表 可以用ul>li*5 -->
+    <ul>
+        <li>0</li>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+</html>

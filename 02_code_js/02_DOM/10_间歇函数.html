@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 第一种方式(开启)
+        setInterval(function() {
+            console.log('1s执行一次');
+        }, 1000)
+
+        // 第二种方式(开启)
+        function fn() {
+            console.log('( •̀ ω •́ )y')
+        }
+
+        // 关闭定时器
+        let num = setInterval(fn, 1000)
+        console.log(num)
+        clearInterval(num)
+    </script>
+</body>
+
+</html>

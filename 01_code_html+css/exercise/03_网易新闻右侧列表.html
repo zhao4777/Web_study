@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        /* 设置背景颜色 */
+        body {
+            background-color: bisque;
+        }
+        /* 所有链接去掉下划线 */
+        a{
+            text-decoration: none;
+        }
+        /* 设置整个块 */
+        .news-wrapper {
+            background-color: #fefefe;
+            width: 300px;
+            height: 357px;
+            /* 块居中 */
+            margin: 50px auto;
+            margin-top: 35px;
+            /* 设置一个上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        /* 设置标题 */
+        .news-title {
+            /* 为了边框和文字宽度一样，需要将h2转换为行内块元素 */
+            display: inline-block;
+            height: 40px;
+            border-top: 1px red solid;
+            /* 通过margin-top将元素上移 */
+            margin-top: -1px;
+            /* 将标题居中 */
+            line-height: 40px;
+        }
+        /* 设置title中链接样式 */
+        .news-title a{
+            /* 去除下划线！！！ */
+            text-decoration: none;
+            color: #404040;
+            /* 字体加粗 */
+            font-weight: bold;
+        }
+
+        /* 设置图片容器高度 */
+        .news-img{
+            height:160px;
+        }
+        /* 设置图片的文字效果 */
+        .news-img h3{
+            color:black;
+            margin-top:-25px;
+            font-weight: bold;
+            padding-left:20px;
+        }
+
+        /* 四行总容器 */
+        .news-list{
+            padding-left: 14px;
+            margin-top:10px;
+        }
+        /* 将每个行分开间距 */
+        .news-list li{
+            padding-top: 10px;
+        }
+        /* 设置li中文字 */
+        .news-list a {
+            color: #666666;
+            font-size: 14px;
+            /* 去除下划线！！！ */
+            text-decoration: none;
+            height: 30px;
+        }
+        .news-list a:hover{
+            color:#c81623;
+        }
+        /* .news-title a{
+            font-size: 14px;
+            width: 78.875px;
+            height: 24.667px;
+            padding-top: 6px;
+            padding-bottom: 10px;
+            display: inline-block;
+        } */
+    </style>
+</head>
+
+<body>
+    <!-- div创建一个列表的外层容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">军事</a>
+            <span>·</span>
+            <a href="#">航空</a>
+        </h2>
+
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <!-- 确保图片和标题可以点击 -->
+            <a href="#">
+                <img src="./练习截图/img/网易01.jpg" alt="网易">
+                <!-- 创建一个图片的标题 -->
+                <h3 class="img-title">
+                    美军C-17运输机运送大批B61核弹
+                </h3>
+            </a>
+        </div>
+
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="#">金正恩视察朝鲜核武器研究所 大批核弹曝光</a>
+            </li>
+            <li>
+                <a href="#">韩国天安舰纪念馆</a>
+            </li>
+            <li>
+                <a href="#">深圳暴雨航班延误取消 有旅客情绪崩溃跪求</a>
+            </li>
+            <li>
+                <a href="#">俄公布宇航员加加林坠机事故现场</a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>

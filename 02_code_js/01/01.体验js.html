@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="pink">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <!-- js体验 -->
+
+    <script>
+        let bts = document.querySelectorAll('button')
+        for (let i = 0; i < bts.length; i++) {
+            bts[i].addEventListener('click', function() {
+                document.querySelector('.pink').className = ''
+                this.className = 'pink'
+            })
+        }
+    </script>
+
+    <!-- 内部js -->
+    <script>
+        // 模板字符串 
+        let age = 19;
+        document.write(`我今年${age}岁了`);
+    </script>
+</body>
+
+</html>

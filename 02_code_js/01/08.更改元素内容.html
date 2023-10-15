@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">我是文字的内容</div>
+    <script>
+        //修改文字内容innerText
+        const box = document.querySelector('.box')
+        console.log(box.innerText) //获取文字内容
+        box.innerText = '修改过后' //修改文字内容
+        box.innerText = '<strong>修改过后</strong>' //不解析标签
+
+        console.log('------------------');
+        //修改文字内容innerHTML
+        console.log(box.innerHTML) //获取文字内容
+        box.innerHTML = '修改过后' //修改文字内容
+        box.innerHTML = '<strong>修改过后</strong>' //解析标签
+    </script>
+</body>
+
+</html>
