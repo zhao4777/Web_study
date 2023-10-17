@@ -139,68 +139,14 @@
 
 
 
-### 2. 事件基础
 
-> JS是我们有能力创建动态页面，而事件是可以被JS侦测到的行为，也就是触发相应的一种机制
-
-
-
-**事件三要素**
-
-- 事件源
-  - 事件被触发的对象
-- 事件类型
-  - 如何触发，什么时间；比如鼠标点击（onclick）还是鼠标经过（onmouseover）还是键盘按下
-- 事件处理程序
-  - 通过一个函数赋值的方式完成
-
-```javascript
-<body>
-    <button id="btn">唐伯虎</button>
-    <script>
-        //事件源
-        var btn = document.getElementById('btn');
-        //事件类型
-        //事件处理程序
-        btn.onclick = function() {
-            alert('点秋香');
-        }
-    </script>
-</body>
-```
-
-
-
-**执行事件的步骤**
-
-- 添加事件源
-- 注册事件（绑定事件）
-- 添加事件处理程序（采取函数赋值形式）
-
-
-
-**常见鼠标事件**
-
-| 鼠标事件    | 触发条件         |
-| ----------- | ---------------- |
-| onclick     | 鼠标点击左键触发 |
-| onmouseover | 鼠标经过触发     |
-| onmouseout  | 鼠标离开触发     |
-| onfocus     | 获得鼠标焦点触发 |
-| onblur      | 失去鼠标焦点触发 |
-| onmousemove | 鼠标移动触发     |
-| onmouseup   | 鼠标弹起触发     |
-| onmousedown | 鼠标按下触发     |
-
-
-
-### 3. 操作元素
+### 2. 操作元素
 
 > JS的DOM操作可以改变网页内容、结构和样式，我们可以利用DOM操作元素来改变元素里面的内容、属性等
 
 
 
-#### 3.1 改变元素内容（旧）
+#### 2.1 改变元素内容（旧）
 
 - element.innerText
   
@@ -240,7 +186,7 @@
 
 
 
-#### 3.1 更改元素内容（新）
+#### 2.1 更改元素内容（新）
 
 - 对象.innerText 属性
   - 显示纯文本，不解析标签
@@ -269,7 +215,7 @@
 
 
 
-#### 3.2 修改元素常见属性
+#### 2.2 修改元素常见属性
 
 - 可以通过JS设置/修改标签元素属性，比如src更换图片
 - 常见属性：herf、title、src等
@@ -292,7 +238,7 @@
 
 
 
-#### 3.3 修改样式属性
+#### 2.3 修改样式属性
 
 **通过style修改样式**
 
@@ -399,7 +345,7 @@
 
 
 
-#### 3.4 操作表单元素 属性
+#### 2.4 操作表单元素 属性
 
 - 获取：DOM对象.属性名
 - 设置：DOM对象.属性名 = 新值
@@ -433,7 +379,7 @@
 
 
 
-#### 3.5 自定义属性
+#### 2.5 自定义属性
 
 > 以上为标准属性，比如class、id、title等，可以直接使用点语法操作，比如：disabled、checked、selected
 
@@ -457,7 +403,7 @@
 
 
 
-### 4.间歇函数（定时器）
+### 3.间歇函数（定时器）
 
 > 目标：能够使用定时器函数重复执行代码，定时器函数可以开启和关闭定时器
 
@@ -501,9 +447,188 @@ clearInterval(变量名)
 
 
 
+### 4. 事件监听
+
+> JS是我们有能力创建动态页面，而事件是可以被JS侦测到的行为，也就是触发相应的一种机制
+
+- 语法：
+
+```javascript
+元素对象.addEventListener('事件类型',要执行的函数)
+```
 
 
 
+**事件三要素**
+
+- 事件源
+  - 事件被触发的对象
+- 事件类型
+  - 如何触发，什么时间；比如鼠标点击（onclick）还是鼠标经过（onmouseover）还是键盘按下
+- 事件处理程序
+  - 通过一个函数赋值的方式完成
+
+```javascript
+<body>
+    <!-- 点击按钮就弹出对话框 -->
+    <button class="btn">按钮</button>
+
+    <script>
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click', function() {
+            alert('点击了')
+        })
+    </script>
+</body>
+```
+
+
+
+**执行事件的步骤**
+
+- 添加事件源
+- 注册事件（绑定事件）
+- 添加事件处理程序（采取函数赋值形式）
+
+
+
+**常见鼠标事件**
+
+| 鼠标事件   | 触发条件         |
+| ---------- | ---------------- |
+| click      | 鼠标点击左键触发 |
+| mouseenter | 鼠标经过触发     |
+| mouseleave | 鼠标离开触发     |
+| focus      | 获得鼠标焦点触发 |
+| blur       | 失去鼠标焦点触发 |
+| Keydown    | 键盘按下触发     |
+| Keyup      | 键盘抬起触发     |
+| input      | 用户输入事件触发 |
+
+
+
+#### 4.1 事件对象
+
+- 是什么
+  - 也是个对象，这个对象里有事件触发时的相关信息
+  - 例如：鼠标点击事件中，事件对象就存了鼠标点在哪个位置等信息
+- 使用场景
+  - 可以判断用户按下哪个键，比如按下回车键就可以发布新闻
+  - 可以判断鼠标点击了哪个元素，从而做出相应的操作
+
+
+
+> 也就是  `btn.addEventListener('click', function(e) {}) ` 中的e就是事件对象
+
+```javascript
+<input type="text">
+<script>
+    const input = document.querySelector('input')
+    input.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            console.log('按下了Enter键')
+        }
+    })
+</script>
+```
+
+##### 4.1.4 trim字符串处理（补）
+
+- 去除字符串左右两端空格，中间空格不去除
+
+```javascript
+<script>
+    // 去除字符串左右两端空格
+    const str = '   i am pink       '    //打印：i am pink
+    console.log(str.trim())
+</script>
+```
+
+
+
+#### 4.2 环境对象this
+
+- 指内部特殊的特殊变量this，它代表着当前函数运行时所处的环境
+- 普通函数里面，this指的是window
+- 谁调用函数，谁就是this
+
+
+
+#### 4.3 回调函数
+
+- 如果将函数A作为参数传递给函数B时，我们称函数A为<span style="color:red;">回调函数</span>
+
+```javascript
+//fn是回调函数
+function fn() {
+    console.log('我是回调函数...')
+}
+setInterval(fn, 1000)
+```
+
+
+
+#### 4.4 事件解绑
+
+- addEventListener方式，若想解绑，必须使用`removeEventListener(事件类型,事件处理函数[,获取捕获或冒泡阶段])`
+
+*[]代表不是必须参数，可不写*
+
+
+
+
+
+### 5. 事件流
+
+> 事件流 指 时间完整执行过程中的流动路径，分为捕获阶段和冒泡阶段
+
+- 事件捕获：
+  - 从DOM的根元素开始去执行对应的事件（从外到里）
+  - 事件捕获需要写对应代码才能看到效果
+- 事件冒泡：
+  - 当一个元素出发事件后，会依次向上调用所有父级元素的同名事件（比如说都是点击click事件）
+  - 事件冒泡是默认存在的
+  - L2事件监听第三个参数是false，或者默认都是冒泡
+
+- 阻止冒泡：
+
+  - 需求：想把事件就限制在当前元素内，就需要阻止事件冒泡
+  - 前提：阻止事件冒泡需要拿到事件对象
+  - 语法：`事件对象.stopPropagation()`
+
+  ```javascript
+  <body>
+      <div class="fa">
+          <div class="son"></div>
+      </div>
+  
+      <script>
+          const fa = document.querySelector('.fa')
+          const son = document.querySelector('.son')
+  
+          document.addEventListener('click', function() {
+              alert('我是爷爷')
+          })
+          fa.addEventListener('click', function() {
+              alert('我是爸爸')
+          })
+          son.addEventListener('click', function(e) {
+              alert('我是儿子')
+                  // 阻止流动
+              e.stopPropagation()
+          })
+      </script>
+  </body>
+  ```
+
+  
+
+### 6.事件委托
+
+- 优点：减少注册次数，可以提高程序性能
+- 原理：利用事件冒泡的特点
+  - 给父元素注册事件，当我们触发子元素时，会冒泡到父元素身上，从而触发父元素的事件
+- 实现：`事件对象.target.tagName`可以获得真正触发事件的元素
 
 
 
